@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education & Certification Pathway | Zach Shoppach</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card: #161b22;
+      --border: #30363d;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --done: #3fb950;
+      --active: #58a6ff;
+      --planned: #d29922;
+      --date-col: 150px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      padding: 3rem 1.25rem;
+    }
+    .wrap { max-width: 860px; margin: 0 auto; }
+    a.back { color: var(--active); text-decoration: none; font-size: .9rem; }
+    h1 { font-size: 2rem; margin: 1rem 0 .25rem; }
+    .sub { color: var(--muted); margin-bottom: 1.5rem; }
+
+    .legend { display: flex; gap: 1.25rem; flex-wrap: wrap; margin-bottom: 2.5rem; font-size: .85rem; color: var(--muted); }
+    .legend span::before {
+      content: ""; display: inline-block; width: 10px; height: 10px;
+      border-radius: 50%; margin-right: .4rem; background: var(--c);
+    }
+
+    /* Timeline: date column | line + dot | card */
+    .timeline { position: relative; }
+    .timeline::before {
+      content: ""; position: absolute; top: 0; bottom: 0;
+      left: calc(var(--date-col) + 1.5rem); width: 2px; background: var(--border);
+    }
+    .item {
+      display: grid;
+      grid-template-columns: var(--date-col) 1fr;
+      column-gap: 3rem;
+      position: relative;
+      margin-bottom: 1.75rem;
+    }
+    .item::before {
+      content: ""; position: absolute; top: 1.1rem;
+      left: calc(var(--date-col) + 1.5rem - 7px);
+      width: 16px; height: 16px; border-radius: 50%;
+      background: var(--bg); border: 3px solid var(--c);
+    }
+    .date {
+      text-align: right; padding-top: .95rem;
+      font-weight: 600; font-size: .95rem; color: var(--c);
+      font-variant-numeric: tabular-nums;
+    }
+    .done    { --c: var(--done); }
+    .active  { --c: var(--active); }
+    .planned { --c: var(--planned); }
+
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-left: 3px solid var(--c); border-radius: 8px; padding: 1rem 1.25rem;
+    }
+    .planned .card { border-style: dashed; border-left-style: solid; }
+    .tag { font-size: .75rem; color: var(--c); font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
+    .card h2 { font-size: 1.1rem; margin: .3rem 0 .2rem; }
+    .card p { color: var(--muted); font-size: .92rem; }
+    .card a { color: var(--active); font-size: .85rem; text-decoration: none; display: inline-block; margin-top: .6rem; }
+    .card a:hover { text-decoration: underline; }
+    .gpa { color: var(--text) !important; font-weight: 600; font-size: .9rem; margin-top: .15rem; }
+    .cw-label { font-size: .75rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin-top: .9rem; }
+    .chips { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .4rem; }
+    .chip {
+      font-size: .8rem; padding: .2rem .6rem; border-radius: 999px;
+      border: 1px solid var(--border); background: var(--bg); color: var(--text);
+    }
+
+    /* Mobile: date sits above the card, line on the left */
+    @media (max-width: 640px) {
+      .timeline { padding-left: 2rem; }
+      .timeline::before { left: 7px; }
+      .item { grid-template-columns: 1fr; }
+      .item::before { left: -2rem; top: .15rem; }
+      .date { text-align: left; padding: 0 0 .4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a class="back" href="index.html">&larr; Back to portfolio</a>
+    <h1>Education & Certification Pathway</h1>
+    <p class="sub">Computer Science, cybersecurity focus</p>
+
+    <div class="legend">
+      <span style="--c: var(--done)">Completed</span>
+      <span style="--c: var(--active)">In progress</span>
+      <span style="--c: var(--planned)">Planned</span>
+    </div>
+
+    <div class="timeline">
+
+      <div class="item done">
+        <div class="date">2022 – 2026</div>
+        <div class="card">
+          <span class="tag">Completed</span>
+          <h2>Bentonville High School</h2>
+          <p>High school diploma</p>
+          <p class="gpa">GPA: 4.3</p>
+        </div>
+      </div>
+
+      <div class="item done">
+        <div class="date">2026</div>
+        <div class="card">
+          <span class="tag">Completed &middot; Additional learning</span>
+          <h2>DataCamp</h2>
+          <p>Six courses in data fundamentals.</p>
+          <div class="chips">
+            <span class="chip">Data Quality</span>
+            <span class="chip">Data Visualization</span>
+            <span class="chip">Data Storytelling</span>
+            <span class="chip">Data Science Concepts</span>
+            <span class="chip">Excel</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="item active">
+        <div class="date">Aug 2026 – Present</div>
+        <div class="card">
+          <span class="tag">In progress</span>
+          <h2>University of Arkansas</h2>
+          <p>B.S. Computer Science, Cybersecurity</p>
+          <p class="gpa">GPA: 4.0</p>
+          <p class="cw-label">Relevant coursework</p>
+          <div class="chips">
+            <span class="chip">Programming Languages for DASC (Python, R)</span>
+            <span class="chip">Honors Intro to Data Science</span>
+            <span class="chip">Calculus I</span>
+            <span class="chip">Calculus II</span>
+            <span class="chip">Physics</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="item active">
+        <div class="date">Nov 2026 – Present</div>
+        <div class="card">
+          <span class="tag">In progress &middot; Coursera</span>
+          <h2>Google Cybersecurity Professional Certificate</h2>
+          <p>Security foundations, networking, Linux, SQL, Python, SIEM tools, and incident response.</p>
+          <!-- Swap in your Credly/Coursera link once earned -->
+          <a href="#" target="_blank" rel="noopener">View credential &rarr;</a>
+        </div>
+      </div>
+
+      <div class="item active">
+        <div class="date">Nov 2026 – Present</div>
+        <div class="card">
+          <span class="tag">In progress &middot; Hands-on labs</span>
+          <h2>TryHackMe</h2>
+          <p>Hands-on offensive and defensive security labs.</p>
+          <!-- Update next year: rank, completed paths, badges -->
+          <p class="cw-label">Learning paths</p>
+          <div class="chips">
+            <span class="chip">Pre Security</span>
+            <span class="chip">Cyber Security 101</span>
+            <span class="chip">SOC Level 1</span>
+          </div>
+          <!-- Replace with your public profile URL -->
+          <a href="#" target="_blank" rel="noopener">View profile &rarr;</a>
+        </div>
+      </div>
+
+      <div class="item planned">
+        <div class="date">Planned</div>
+        <div class="card">
+          <span class="tag">Planned &middot; Study abroad</span>
+          <h2>Universidad Carlos III de Madrid</h2>
+          <p>One-semester exchange in Madrid, Spain.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

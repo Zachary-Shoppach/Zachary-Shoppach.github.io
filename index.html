@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zach Shoppach | Portfolio</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card: #161b22;
+      --border: #30363d;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      padding: 4rem 1.25rem;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; }
+    h1 { font-size: 2.4rem; line-height: 1.2; }
+    .role { color: var(--accent); font-weight: 600; margin: .4rem 0 1rem; }
+    .intro { color: var(--muted); max-width: 600px; }
+    .links { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.75rem 0 3.5rem; }
+    .btn {
+      display: inline-block; padding: .55rem 1.1rem; border-radius: 6px;
+      border: 1px solid var(--border); color: var(--text); text-decoration: none; font-size: .92rem;
+    }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: #0d1117; font-weight: 600; }
+    .btn:hover { border-color: var(--accent); }
+    h2 { font-size: 1.25rem; margin-bottom: 1rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
+    .card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+      padding: 1.1rem 1.25rem; display: flex; flex-direction: column;
+    }
+    .card h3 { font-size: 1.05rem; margin-bottom: .3rem; }
+    .card p { color: var(--muted); font-size: .92rem; flex: 1; }
+    .tags { display: flex; flex-wrap: wrap; gap: .4rem; margin: .8rem 0 .6rem; }
+    .tag { font-size: .75rem; padding: .15rem .55rem; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); }
+    .card a { color: var(--accent); font-size: .88rem; text-decoration: none; }
+    .card a:hover { text-decoration: underline; }
+    footer { margin-top: 4rem; color: var(--muted); font-size: .85rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Zach Shoppach</h1>
+    <p class="role">Computer Science · Cybersecurity · University of Arkansas</p>
+    <p class="intro">
+      I'm a CS student focused on cybersecurity, building skills through coursework,
+      the Google Cybersecurity Certificate, and hands-on labs. I also do data analysis
+      in Python and R.
+    </p>
+
+    <div class="links">
+      <a class="btn primary" href="pathway.html">Education & Certifications</a>
+      <a class="btn" href="https://github.com/Zachary-Shoppach" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/zachary-shoppach-704b98260" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="mailto:zshoppach@uark.edu">Email</a>
+    </div>
+
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Powerball Number Analysis</h3>
+        <p>Team data science project analyzing historical Powerball winning numbers. I wrote the analysis and visualization code.</p>
+        <div class="tags"><span class="tag">R</span><span class="tag">ggplot2</span><span class="tag">Data analysis</span></div>
+        <!-- Replace # with the repo link -->
+        <a href="#" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+      </div>
+
+      <div class="card">
+        <h3>Coffee Shop Tipping Analysis</h3>
+        <p>Exploratory analysis of 3,000+ real coffee shop transactions, testing whether customers tip more per dollar during peak hours.</p>
+        <div class="tags"><span class="tag">Excel</span><span class="tag">EDA</span><span class="tag">Hypothesis testing</span></div>
+        <!-- Replace # with the repo link -->
+        <a href="#" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+      </div>
+    </div>
+
+    <footer>© 2026 Zach Shoppach</footer>
+  </div>
+</body>
+</html>
