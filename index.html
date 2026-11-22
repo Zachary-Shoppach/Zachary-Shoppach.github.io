@@ -22,9 +22,14 @@
       padding: 4rem 1.25rem;
     }
     .wrap { max-width: 760px; margin: 0 auto; }
+    .hero { display: flex; align-items: center; gap: 1.75rem; flex-wrap: wrap; }
+    .headshot {
+      width: 140px; height: 140px; border-radius: 50%; object-fit: cover;
+      border: 3px solid var(--border); flex-shrink: 0;
+    }
     h1 { font-size: 2.4rem; line-height: 1.2; }
     .role { color: var(--accent); font-weight: 600; margin: .4rem 0 1rem; }
-    .intro { color: var(--muted); max-width: 600px; }
+    .intro { color: var(--muted); max-width: 600px; margin-top: 1.25rem; }
     .links { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.75rem 0 3.5rem; }
     .btn {
       display: inline-block; padding: .55rem 1.1rem; border-radius: 6px;
@@ -49,8 +54,13 @@
 </head>
 <body>
   <div class="wrap">
-    <h1>Zach Shoppach</h1>
-    <p class="role">Computer Science · Cybersecurity · University of Arkansas</p>
+    <div class="hero">
+      <img class="headshot" src="headshot.jpg" alt="Zach Shoppach">
+      <div>
+        <h1>Zach Shoppach</h1>
+        <p class="role">Computer Science · Cybersecurity · University of Arkansas</p>
+      </div>
+    </div>
     <p class="intro">
       I'm a CS student focused on cybersecurity, building skills through coursework,
       the Google Cybersecurity Certificate, and hands-on labs. I also do data analysis
